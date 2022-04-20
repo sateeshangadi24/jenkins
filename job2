@@ -8,7 +8,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 echo"building version ${VERSION}"
-            }
+            
         }
         stage('Test') {
             steps {
@@ -18,6 +18,11 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+            }
+        }
+        post{
+            always{
+                  echo 'execute always pass or fail'
             }
         }
     }
