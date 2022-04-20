@@ -8,7 +8,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 echo"building version ${VERSION}"
-            
+            }
         }
         stage('Test') {
             steps {
