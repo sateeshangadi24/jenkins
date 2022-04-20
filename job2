@@ -20,10 +20,10 @@ pipeline {
                 echo 'Deploying....'
             }
         }
-        post{
-            always{
-                  echo 'execute always pass or fail'
-            }
+    }
+    post{
+        always{
+            echo'exeucte always pass or fail'
         }
     }
 }
