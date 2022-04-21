@@ -1,0 +1,28 @@
+pipeline{
+    agent any
+    environment{
+      user_name='sateesh'
+      user_id=123
+    }
+    stages{
+        stage('Build'){
+           parallel{
+                stage('Build on name'){
+                     steps{
+                         echo"the build name is ${user_name}"
+                     }
+                }
+                stage('Build on id'){
+                   steps{
+                      echo"the build is is ${user_id}"
+                   }
+                }
+           }
+           stage('Testing'){
+               steps{
+                   echo"the url of jenkins ${JENKINS_URL}"
+               }
+           }
+        }
+    }
+}
