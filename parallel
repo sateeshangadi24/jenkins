@@ -18,6 +18,7 @@ pipeline{
                    }
                 }
            }
+           }
            stage('Testing'){
                steps{
                    echo"the url of jenkins ${JENKINS_URL}"
