@@ -10,7 +10,7 @@ pipeline{
     stages{
          stage('Build'){
              steps{
-                 echo'its building stage'
+                 echo"its building stage"
                  echo"the purpose is ${params.jenkins}"
                  echo"the executor number is ${EXECUTOR_NUMBER}"
              }
