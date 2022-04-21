@@ -24,6 +24,6 @@ pipeline{
                    echo"the url of jenkins ${JENKINS_URL}"
                }
            }
-        }
+        
     }
 }
