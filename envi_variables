@@ -1,0 +1,35 @@
+pipeline{
+    agent any
+    parameters{
+       string(name:'jenkins',defaultValue:'execution',description:'its for execution')   
+    }
+    environment{
+       USER_NAME='sateesh'
+       USER_ID=45
+    }
+    stages{
+         stage('Build'){
+             steps{
+                 echo'its building stage'
+                 echo"the purpose is ${jenkins}"
+                 echo"the executor number is ${EXECUTOR_NUMBER}"
+             }
+         }
+         stage('Testing'){
+             steps{
+                  echo"the user name is ${USER_NAME}"
+                  echo"the user id is ${USER_ID}"
+                  echo "the build id is ${BUILD_ID}"
+                  echo "the build number is ${BUILD_NUMBER}"
+             }
+         }
+         stage('Deploying'){
+             steps{
+                 echo'its execution part'
+                 echo"the java home path is ${JAVA_HOME}"
+                 echo"the jenkins url is ${JENKINS_URL}"
+                 echo"the job name ${JOB_NAME}  the node name ${NODE_NAME}  the workspace name is ${WORKSPACE}"
+             }
+         }
+    }
+}
