@@ -5,12 +5,12 @@ pipeline{
   stages{
     stage('demo'){
       steps{
-        welcome("==sateesh==")
+        welcome("==sateesh==","=====angadi=====")
       }
     }
     stage('test'){
       steps{
-        welcome(3,2)
+        welcome(3)
       }
     }
   }
