@@ -6,12 +6,15 @@ pipeline{
     stage('demo'){
       steps{
         welcome.call("==sateesh==","=====angadi=====")
-        welcome.get("3")
+        script{
+          calc.add(24,12)
+          calc.mul(24,12)
+        }
       }
     }
     stage('test'){
       steps{
-        welcome.get("3")
+       echo"the step for testing"
       }
     }
   }
