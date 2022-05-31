@@ -6,12 +6,12 @@ pipeline{
     stage('demo'){
       steps{
         welcome.call("==sateesh==","=====angadi=====")
-        welcome.get(3)
+        welcome.get("3")
       }
     }
     stage('test'){
       steps{
-        welcome.get(3)
+        welcome.get("3")
       }
     }
   }
