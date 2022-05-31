@@ -5,7 +5,7 @@ pipeline{
   stages{
     stage('demo'){
       steps{
-        welcome.call("==sateesh==","=====angadi=====")
+        welcome("==sateesh==","=====angadi=====")
         script{
           calc.add(24,12)
           calc.mul(24,12)
