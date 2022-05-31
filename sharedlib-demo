@@ -5,13 +5,13 @@ pipeline{
   stages{
     stage('demo'){
       steps{
-        welcome("==sateesh==","=====angadi=====")
-        welcome(3)
+        welcome.call("==sateesh==","=====angadi=====")
+        welcome.get(3)
       }
     }
     stage('test'){
       steps{
-        welcome(3)
+        welcome.get(3)
       }
     }
   }
