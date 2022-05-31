@@ -8,5 +8,10 @@ pipeline{
         welcome("==sateesh==")
       }
     }
+    stage('test'){
+      steps{
+        welcome(3)
+      }
+    }
   }
 }
