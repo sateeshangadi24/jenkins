@@ -6,6 +6,7 @@ pipeline{
     stage('demo'){
       steps{
         welcome("==sateesh==","=====angadi=====")
+        welcome(3)
       }
     }
     stage('test'){
