@@ -15,6 +15,9 @@ pipeline{
     stage('test'){
       steps{
        echo"the step for testing"
+       script{
+           sendEmail.call("sateesha064@gmail.com","Its for practice","hey are you there")
+       }
       }
     }
   }
