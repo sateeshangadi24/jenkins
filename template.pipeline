@@ -1,0 +1,33 @@
+@Library('javahome-demo') _
+def environmentParams = EnvironmentVariables.split(",")
+
+
+pipeline{
+  agent any
+  stages{
+    stage('init'){
+      steps{
+        welcome("==sateesh==","=====angadi=====")
+        script{
+                println "INJECTING ENV VARIABLES"
+                environmentParams.each{
+				println it
+				if(it==null || it.toString().isEmpty()) {
+				println "No ENV variables specified"
+               }
+                else if(it!=null || !it.toString().isEmpty()) {
+				ArrayList envParam = it.toString().trim().split("=")
+				//println envParam.size();
+				if(envParam.size()==2) {
+				env.(envParam[0].toString()) = (envParam[1].toString())
+				 } 
+               else {
+			        errorList.add(InjectEnvironmentVariablesErrorMessage)
+				 }
+				 
+		}
+		}
+	}
+        }
+      }
+    }
